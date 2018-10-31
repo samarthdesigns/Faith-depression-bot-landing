@@ -1,0 +1,132 @@
+@font-face {
+    font-family:'Gotham';
+    src: url('fonts/Gotham.otf');
+}
+
+
+body{
+    width: 250px;
+    height: 541px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+
+.landing{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background:#141414;
+}
+
+.main{
+    position: relative;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #141414;
+    transition: all .6s ease;
+}
+
+.main-ani{
+    left: -100%;
+    opacity: 0;
+}
+
+.faith-logo{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(0deg);
+    opacity: 0;
+    animation: logo-fade 1.3s ease forwards;
+}
+
+.welcome-text{
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 33%;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+    opacity: 0;
+    letter-spacing: 0.04em;
+    animation: welcome-fade .5s ease-in-out forwards .8s;
+    font-family: 'Gotham';
+}
+
+.login{
+    height: 35px;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    line-height: 35px;
+    font-size: 14px;
+    text-align: center;
+    color:#fff;
+    font-family: 'Gotham';
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition:all .6s ease;
+}
+
+.login:hover{
+    background:#fff;
+    color:#141414;
+}
+
+.chat-main{
+    position: relative;
+    top: -100%;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background:#141414;
+    transition: all .4s ease;
+    opacity: 0;
+}
+
+.chat-main-ani{
+    left: 0%;
+    opacity: 1;
+}
+
+.b-agent-demo_powered_by{
+    display: none;
+}
+
+@keyframes logo-fade{
+    0%{
+        opacity: 0;
+        top:50%;
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+
+    40%{
+        opacity: 1;
+        top: 50%;
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+
+    100%{
+        opacity: 1;
+        top: 35%;
+        transform: translate(-50%,-50%) rotate(-180deg);
+    }
+}
+
+@keyframes welcome-fade{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
